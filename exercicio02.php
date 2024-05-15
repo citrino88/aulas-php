@@ -27,10 +27,10 @@
         ?>
         <h2>A saída dos dados</h2>
         <ol>
-            <li><?=$dados["nome"]?></li>
-            <li><?=$dados["idade"]?></li>
-            <li><?=$dados["cidade"]?></li>
-            <li><?=$dados["telefone"][1]?></li>
+            <li>Nome: <?=$dados["nome"]?></li>
+            <li>Idade: <?=$dados["idade"]?></li>
+            <li>Cidade: <?=$dados["cidade"]?></li>
+            <li>Telefone: <?=$dados["telefone"][1]?></li>
         </ol>
         
     </div>
