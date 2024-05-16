@@ -31,7 +31,7 @@
     <h2>Composta (usa <code>if/else</code>)</h2>
     <?php
     /* Exemplo: Controle de estoque */
-    $produto = "Geladeira"; // trocar aqui os nomes para testar
+    $produto = "TV"; // trocar aqui os nomes para testar
     $qtdEmEstoque = 0; // o que temos no momento
     $qtdCritica = 2; // mínino necessário    
     ?>
@@ -83,8 +83,19 @@
     <!-- abaixo outra solução de saida ano(s), o php tem que iniciar colado a palavra ano -->
     <p> O produto <?=$produto?> tem garantia de <span class="badge text-bg-primary"> <?=$garantia?> </span> ano<?php if($garantia > 1) echo "s" ?>.</p>
 
+    <h2>Condicional com <code>switch/case</code></h2>
+    <p><i>Estrutura alternativa para condicional encadeada</i></p>
 
+    <?php
+    switch ($produto) {
+        case 'Ultrabook': $garantiaB = 5; break;
+        case 'Geladeira': $garantiaB = 3; break;
+        case 'TV': $garantiaB = 2; break;
+        default: $garantiaB = 1; break;
+    }
 
+    ?>
+    <p>Garantia B: <?=$garantiaB?></p>
 
 
 
