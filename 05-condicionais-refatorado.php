@@ -69,8 +69,7 @@
     <h2>Encadeada (usa <code>if, else, else if</code>)</h2>
     
     
-    <?php
-    
+    <?php    
     if ($produto == "Ultrabook") {
         $garantia = 5; 
     } else if ($produto == "Geladeira") {
@@ -92,6 +91,7 @@
 
     
     <p> O produto <?=$produto?> tem garantia de <span class="badge text-bg-primary"> <?=$garantia?> </span> ano<?php if($garantia > 1) echo "s" ?>.</p>
+    <hr>
 
     <h2>Condicional com <code>switch/case</code></h2>
     <p><i>Estrutura alternativa para condicional encadeada</i></p>
@@ -103,8 +103,8 @@
         case 'TV': $garantiaB = 2; break;
         default: $garantiaB = 1; break;
     }
-
     ?>
+    
     <p>Garantia B: <?=$garantiaB?></p>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
