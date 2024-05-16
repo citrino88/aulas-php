@@ -9,6 +9,10 @@
         p{
             font-weight: 500;
         }
+        h2{
+            color: darkblue;
+            font-weight: 700;
+        }
     </style>
 </head>
 <body class="container">
@@ -27,7 +31,7 @@
     <h2>Composta (usa <code>if/else</code>)</h2>
     <?php
     /* Exemplo: Controle de estoque */
-    $produto = "Ultrabook";
+    $produto = "Geladeira"; // trocar aqui os nomes para testar
     $qtdEmEstoque = 0; // o que temos no momento
     $qtdCritica = 2; // mínino necessário    
     ?>
@@ -50,9 +54,24 @@
         echo "<p class=\"alert alert-success\"> Estoque está normal</>";
     }
     /* Caso contrário, simplesmente falar que o estoque está normal. */
-       
     ?>
-
+    <hr>
+    <h2>Encadeada (usa <code>if, else, else if</code>)</h2>
+    <?php
+    /* Verificado o produto e atribuindo diferentes garantias (em anos) */
+    
+    if ($produto == "Ultrabook") {
+        $garantia = 5; 
+    } else if ($produto == "Geladeira") {
+        $garantia = 3; 
+    } else if ($produto == "TV") {
+        $garantia = 2; 
+    } else {
+        $garantia = 1; 
+    }     
+    ?>
+    
+    <p> O produto <?=$produto?> tem garantia de <span class="badge text-bg-primary"> <?=$garantia?> </span> anos.</p>
 
 
 
