@@ -68,10 +68,20 @@
         $garantia = 2; 
     } else {
         $garantia = 1; 
-    }     
+    }
+
+    if ($garantia == 1){
+        $ano ="ano";
+    } else{
+        $ano ="anos";
+    }
     ?>
     
-    <p> O produto <?=$produto?> tem garantia de <span class="badge text-bg-primary"> <?=$garantia?> </span> anos.</p>
+       
+    <p> O produto <?=$produto?> tem garantia de <span class="badge text-bg-primary"> <?=$garantia?> </span> <?=$ano?> .</p>
+
+    <!-- abaixo outra solução de saida ano(s), o php tem que iniciar colado a palavra ano -->
+    <p> O produto <?=$produto?> tem garantia de <span class="badge text-bg-primary"> <?=$garantia?> </span> ano<?php if($garantia > 1) echo "s" ?>.</p>
 
 
 
