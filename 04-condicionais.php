@@ -43,15 +43,15 @@
     <?php
     /* Se a quantidade em estoque for abaixo da quantidade crítica, o sistema deve avisar e pedir pra repor. */
     if ( $qtdEmEstoque < $qtdCritica ) {
-        echo "<p class=\"alert alert-warning\"> É necessário repor</>";
+        echo "<p class=\"alert alert-warning\"> É necessário repor</p>";
 
         /* Condicional ANINHADA */
         if ( $qtdEmEstoque == 0){
-        echo "<p class=\"alert alert-danger\"> COMPRAR AGORA!!!</>";    
+        echo "<p class=\"alert alert-danger\"> COMPRAR AGORA!!!</p>";    
         }
 
     } else {
-        echo "<p class=\"alert alert-success\"> Estoque está normal</>";
+        echo "<p class=\"alert alert-success\"> Estoque está normal</p>";
     }
     /* Caso contrário, simplesmente falar que o estoque está normal. */
     ?>

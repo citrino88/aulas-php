@@ -13,18 +13,20 @@
             color: darkblue;
             font-weight: 700;
         }
+        hr{margin-bottom: 3rem;}
     </style>
 </head>
 <body class="container">
-    <h1 class="m-3">Condicionais em PHP (VERSÃO REFATORADO)</h1>
+    <h1 class="m-3">Condicionais em PHP (VERSÃO REFATORADA)</h1>
     <hr>
     <h2>Simples (não tem o <code>else</code>)</h2>
     
     <?php
     $numero = 50;
     if($numero < 100){
-       
-        echo "<p>Condição é verdadeira / true!</p>";
+    ?>   
+        <p>Condição é verdadeira / true!</p>
+    <?php    
     }   
     ?>
     <hr>
@@ -32,7 +34,7 @@
     <?php
     
     $produto = "TV"; 
-    $qtdEmEstoque = 0; 
+    $qtdEmEstoque = 10; 
     $qtdCritica = 2; 
     ?>
 
@@ -40,25 +42,34 @@
     <h3>Estoque: <?=$qtdEmEstoque?></h3>
     <h3>Quantidade mínima necessária: <?=$qtdCritica?></h3>
 
-    <?php
-   
+    <?php   
     if ( $qtdEmEstoque < $qtdCritica ) {
-        echo "<p class=\"alert alert-warning\"> É necessário repor</>";
+    ?>   
 
-       
+        <p class="alert alert-warning"> É necessário repor</p>
+
+    <?php   
         if ( $qtdEmEstoque == 0){
-        echo "<p class=\"alert alert-danger\"> COMPRAR AGORA!!!</>";    
-        }
-
-    } else {
-        echo "<p class=\"alert alert-success\"> Estoque está normal</>";
-    }
+    ?>        
+        
+        <p class="alert alert-danger"> COMPRAR AGORA!!!</p>
     
+    <?php
+        }    
+    } else {
+    ?>    
+        
+        <p class="alert alert-success"> Estoque está normal</p>
+
+    <?php    
+    }
     ?>
+
     <hr>
     <h2>Encadeada (usa <code>if, else, else if</code>)</h2>
-    <?php
     
+    
+    <?php
     
     if ($produto == "Ultrabook") {
         $garantia = 5; 
