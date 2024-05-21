@@ -50,11 +50,15 @@ foreach($meses as $mes ){
 ?>
 </ol>
 
-
-
-
-
-
+<!-- SOLUÇÃO PROGRAMADA -->
+<!-- Neste caso, avaliamos o resto da divisão por 2. Quando é zero (ou seja, número par), atribuimos a cor vermelha. Quando é diferente de zero (ou seja, ímpar), atribuimos a cor azul. -->
+<ol>
+<?php for ( $i = 0; $i < count ($meses); $i++ ){
+    $cor = $i % 2 == 0 ? "red" : "blue";
+?>
+    <li style= "color: <?=$cor?>"> <?= $meses[$i] ?> </li>
+<?php } ?>
+</ol>
 
 
 
