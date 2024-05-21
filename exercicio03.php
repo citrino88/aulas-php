@@ -35,6 +35,22 @@ foreach($meses as $mes ){
 }
 echo "</ol>";
 ?>
+<!-- REFATORANDO O CÓDIGO ACIMA -->
+
+<?php
+$meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+?>        
+    <ol>
+<?php        
+foreach($meses as $mes ){
+?>
+    <li> <?=$mes?> </li>
+<?php    
+}
+?>
+</ol>
+
+
 
 
 
