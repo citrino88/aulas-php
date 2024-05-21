@@ -15,9 +15,13 @@
         }
         hr{margin-bottom: 3rem;}
 
-        li:nth-child(odd) {
+        .lista-colorida:nth-child(odd) {
             background-color: bisque;
-        }
+        }    
+        .list-group-item:nth-child(odd){
+            background-color: lightblue;
+        }    
+        
     </style>
 </head>
 <body class="container">
@@ -30,13 +34,13 @@ $meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "
     echo "<ol>";
 foreach($meses as $mes ){
 
-    echo "<li> $mes </li>";
+    echo "<li class=\"lista-colorida\"> $mes </li>";
     
 }
 echo "</ol>";
 ?>
 <!-- REFATORANDO O CÓDIGO ACIMA -->
-
+<h2>Solução com Código Refatorado</h2>
 <?php
 $meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
 ?>        
@@ -44,7 +48,7 @@ $meses = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "
 <?php        
 foreach($meses as $mes ){
 ?>
-    <li> <?=$mes?> </li>
+    <li class="lista-colorida"> <?=$mes?> </li>
 <?php    
 }
 ?>
@@ -52,12 +56,25 @@ foreach($meses as $mes ){
 
 <!-- SOLUÇÃO PROGRAMADA -->
 <!-- Neste caso, avaliamos o resto da divisão por 2. Quando é zero (ou seja, número par), atribuimos a cor vermelha. Quando é diferente de zero (ou seja, ímpar), atribuimos a cor azul. -->
+<h2>Solução com Programada</h2>
 <ol>
 <?php for ( $i = 0; $i < count ($meses); $i++ ){
     $cor = $i % 2 == 0 ? "red" : "blue";
 ?>
     <li style= "color: <?=$cor?>"> <?= $meses[$i] ?> </li>
 <?php } ?>
+</ol>
+
+<!-- Solução com Bootstrap -->
+<h2>Solução com Bootstrap</h2>
+<ol class="list-group list-group-numbered">
+<?php        
+foreach($meses as $mes ){
+?>
+    <li class="list-group-item"> <?=$mes?> </li>
+<?php    
+}
+?>
 </ol>
 
 
