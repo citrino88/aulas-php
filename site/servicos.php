@@ -1,12 +1,13 @@
 <?php include "cabecalho.php"; ?>
 
-            <h2>Portfólio</h2>
+            <h2>Serviços Prestados</h2>
+            <ol>
+                <li>Criação</li>
+                <li>Manutenção</li>
+                <li>Divulgação</li>
+            </ol>
             <details>
-                <summary>Game</summary>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, aut?</p>
-            </details>
-            <details>
-                <summary>Web Site</summary>
+                <summary>Detalhes de Criação</summary>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur quae voluptates, veritatis dicta sint dignissimos.</p>
             </details>
 
