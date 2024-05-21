@@ -14,7 +14,7 @@
     <div class="container">
         <div class="alert alert-info">
             <p>Empresa: <?=EMPRESA?></p>
-            <P>Ano Fiscal: <?=$anoFiscal?></P>
+            <p>Ano Fiscal: <?=$anoFiscal?></p>       
         </div>
         <hr>
         <h1>Arrays</h1>
