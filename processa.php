@@ -8,8 +8,35 @@
 <body>
     <h1>Processamento dos dados vindos do formulário</h1>
     <hr>
+<?php 
+/* Capturando os dados provenientes do formulário usando o array superglobal $_POST[] (porque é acessível de qualquer lugar). Se o form usar método get, então usaríamos $_GET[] (não seguro para dados quando transmitidos em URL, mas pode ser usado em campo de Pesquisar) */
+?>
+<!-- <pre>< /*var_dump($_POST)  */? ></pre>  para testar não esquecer de colocar abre e fecha php dentro corretamente, este é só comentario -->
+<?php
+$nome = $_POST['nome'];
+$email = $_POST['email'];
+$nascimento = $_POST['nascimento'];
+$mensagem = $_POST['mensagem'];
 
-    
+if(empty($nome) || empty($email)){
+?>
+<p>Você deve preencher <b>nome</b> e <b>e-mail</b></p>
+<?php
+} else {
+?> 
+
+   
+
+
+<h2>Dados recebidos</h2>
+<ul>
+    <li>Nome: <?=$nome?></li>
+    <li>E-mail: <?=$email?></li>
+    <li>Data de nascimento: <?=$nascimento?></li>
+    <li>Mensagem: <?=$mensagem?></li>
+</ul>
+
+<?php } ?> 
 
 </body>
 </html>
