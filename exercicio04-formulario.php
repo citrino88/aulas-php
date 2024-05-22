@@ -21,14 +21,17 @@
 				<?php
                 $fabricantes = ["Apple", "Samsung", "Motorola", "LG"];
 
-                foreach ($fabricantes as $fabricante)
-                echo "<option value=\"$fabricante\">$fabricante</option>";
-                ?>
-				
+                foreach ($fabricantes as $fabricante){
+                ?>    
+                <option><?php= $fabricante?></option>
+                <?php
+                }
+				?>
 				<!-- Faça aqui a programação necessária para obter os dados de um array (criado por você)
 				e colocá-los (cada um) dentro de uma tag <option>. -->	
 
 			</select>
+
 		</p>
 
 		<p>

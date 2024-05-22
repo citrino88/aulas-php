@@ -36,6 +36,7 @@ $precoFormatado = number_format($preco, 2, ',', '.'); // Formata o preço com 2 
     <li class="list-group-item">Fabricante: <?=$fabricante?></li>
     <li class="list-group-item">Preço: R$ <?=$precoFormatado?></li>
     <li class="list-group-item">Descrição: <?=$descricao?></li>
+    <li class="list-group-item"> Refatorado R$ <?=number_format($preco, 2, ',', '.') ?></li>
     
 </ul>
     
