@@ -8,15 +8,12 @@
 <body>
     <h1>Exercício 04 (formulário)</h1>
     <hr>
-    <form autocomplete="off" action="" method="">
+    <form autocomplete="off" action="exercicio04-processamento.php" method="post">
         <p>
             <label for="produto">Produto:</label>
             <input required type="text" name="produto" id="produto">
         </p>
-     <?php 
-     
-     ?>
-		<p>
+        <p>
 			<label for="fabricante">Fabricante:</label>
 			<select name="fabricante" id="fabricante">
             <option value=""><!-- Selecione uma opção --></option>
